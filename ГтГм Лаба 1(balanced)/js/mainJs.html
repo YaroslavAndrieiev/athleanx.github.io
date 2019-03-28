@@ -1,0 +1,44 @@
+function MyAlert()
+{
+	var str=prompt('Введите номер телефона:');
+	if(str!="")
+		alert(str+'.Наш оператор свяжется с вами в ближайшее время.');
+}
+function MyClear()
+{
+	document.getElementById("input1").value="";
+	document.getElementById("input2").value="";
+	document.getElementById("input3").value="";
+	
+}
+function MyAlertForm()
+{
+	var name=document.getElementById("input1").value;
+	var mail=document.getElementById("input2").value;
+	var masage=document.getElementById("input3").value;
+	if(document.getElementById("input1").value!="" && document.getElementById("input2").value!="" && document.getElementById("input3").value!="")
+	{
+		alert(name+", ваше сообщение было отправлено.");
+		document.getElementById("input1").value="";
+		document.getElementById("input2").value="";
+		document.getElementById("input3").value="";
+	}
+	else
+	{
+		document.getElementById("input1").placeholder="Заполните поле";
+		document.getElementById("input2").placeholder="Заполните поле";
+		document.getElementById("input3").placeholder="Заполните поле";
+	}
+
+	/*
+	var fso = new ActiveXObject("Masages.txt");
+	var fh = fso.OpenTextFile("G:/Masages", 8);
+	fh.WriteLine(name);
+	fh.Close();
+	fs=require("fs")
+	fs.writeFileSync("Masages.txt", "my text",  "ascii")
+	const fs = require("fs");
+	fs.appendFileSync("Masages.txt", "Клиент №1. Имя:"+name); 
+	*/
+}	
+
